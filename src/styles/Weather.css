@@ -1,0 +1,54 @@
+.weather-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: var(--background-color);
+}
+
+.weather-box {
+  padding: 20px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 255, 0.5);
+  box-shadow: 0 0 10px rgba(0, 0, 255, 0.5);
+  background-color: var(--box-background-color);
+  text-align: center;
+}
+
+.weather-box input {
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.weather-box button {
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+}
+
+.weather-box button:hover {
+  background-color: #0056b3;
+}
+
+.weather-box img {
+  margin-top: 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background-color: #333;
+    --box-background-color: #444;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    --background-color: #f0f0f0;
+    --box-background-color: #fff;
+  }
+}
