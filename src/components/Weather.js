@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import getWeather from '../WeatherApi.js';
+import WeatherInfo from './WeatherInfo';
 import '../styles/Weather.css';
 
 const Weather = () => {
@@ -24,15 +25,7 @@ const Weather = () => {
           />
           <button type="submit">Get Weather</button>
         </form>
-        {weather && (
-          <div>
-            <h3>Weather in {city}</h3>
-            <p>Condition: {weather.condition}</p>
-            <p>Temperature: {weather.temperature}°C</p>
-            <p>Local Time: {weather.time}</p>
-            <img src={`http://openweathermap.org/img/wn/${weather.icon}@2x.png`} alt={weather.condition} />
-          </div>
-        )}
+        {weather && <WeatherInfo city={city} weather={weather} />}
       </div>
     </div>
   );
